@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-
+import pandas as pd
 # Load the CSV file with the car data
 pred_df = pd.read_csv("./AB_US_2020.csv")
 
