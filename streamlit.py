@@ -36,7 +36,7 @@ longitude = row1.slider("Longitude",
                         -200, 0, step=1)
 
 # Create a slider to set the reviews per month
-reviews = row1.slider("Reviews / Month",
+reviews_per_month = row1.slider("Reviews / Month",
                         0, 10, step=1)
 
 
