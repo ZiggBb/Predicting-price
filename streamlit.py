@@ -11,9 +11,14 @@ st.write("""# Price Prediction App
 # Function to make the prediction using the pre-trained model
 def model_pred(reviews_per_month, latitude, longitude, id):
 
+
+ with open("USA_database.ipynb") as file:
+        reg_model = pickle.load(file)
+
+
     # Prepare the input features
-    chara_Test = [[reviews_per_month, latitude, longitude, id]]
-    return forest.predict(chara_Test)
+    input_features = [[reviews_per_month, latitude, longitude, id]]
+    return reg_model.predict(input_features)
 
 # Create two columns in the UI
 col1, col2, col3 = st.columns(3)
@@ -23,7 +28,7 @@ row1, row2 = st.columns(2)
 # Create a textbox to put for the id
 id = row1.text_input("ID")
 
-# Create a slider to set the engine power
+# Create a slider to set the latitude
 latitude = row1.slider("Latitude",
                         0, 50, step=1)
 
