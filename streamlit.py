@@ -2,8 +2,6 @@ import streamlit as st
 import pickle
 import pandas as pd
 # Load the CSV file with the car data
-pickle_in = open("AB_US_2020.csv","rb")
-price_finder=pickle.load(pickle_in)
 
 pred_df = pd.read_csv("./AB_US_2020.csv")
 
