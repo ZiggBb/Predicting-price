@@ -12,7 +12,7 @@ st.write("""# Price Prediction App
 def model_pred(reviews_per_month, latitude, longitude, id):
 
     # Prepare the input features
-    input_features = [[reviews, lat, long, id]]
+    input_features = [[reviews_per_month, latitude, longitude, id]]
     return reg_model.predict(input_features)
 
 # Create two columns in the UI
