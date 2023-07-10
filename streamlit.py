@@ -11,9 +11,6 @@ st.write("""# Price Prediction App
 # Function to make the prediction using the pre-trained model
 def model_pred(reviews_per_month, latitude, longitude, id):
 
-
-
-
     # Prepare the input features
     chara_Test = [[reviews_per_month, latitude, longitude, id]]
     return forest.predict(chara_Test)
