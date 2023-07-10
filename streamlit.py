@@ -11,10 +11,6 @@ st.write("""# Price Prediction App
 # Function to make the prediction using the pre-trained model
 def model_pred(reviews_per_month, latitude, longitude, id):
 
-    ## Load the pre-trained model using pickle
-    with open("db", "rb") as file:
-        reg_model = pickle.load(file)
-
     # Prepare the input features
     input_features = [[reviews, lat, long, id]]
     return reg_model.predict(input_features)
