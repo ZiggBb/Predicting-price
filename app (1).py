@@ -47,7 +47,7 @@ reviews = row1.slider("Reviews / Month",
 if(st.button("Predict Price")):
 
     # Make the prediction
-    price = model_pred(reviews_per _month, latitude, longitude, id)
+    price = model_pred(reviews_per_month, latitude, longitude, id)
 
      # Display the result on the UI
     st.text("Predicted price: "+ str(price))
