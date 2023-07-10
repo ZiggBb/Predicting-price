@@ -12,8 +12,8 @@ st.write("""# Price Prediction App
 def model_pred(reviews_per_month, latitude, longitude, id):
 
     # Prepare the input features
-    input_features = [[reviews_per_month, latitude, longitude, id]]
-    return reg_model.predict(input_features)
+    chara_Test = [[reviews_per_month, latitude, longitude, id]]
+    return forest.predict(chara_Test)
 
 # Create two columns in the UI
 col1, col2, col3 = st.columns(3)
